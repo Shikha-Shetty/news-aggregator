@@ -1,0 +1,17 @@
+[
+    {
+      "username": "user1",
+      "password": "password1",
+      "news_preferences": ["technology", "sports"]
+    },
+    {
+      "username": "user2",
+      "password": "password2",
+      "news_preferences": ["politics", "health"]
+    },
+    {
+      "username": "user3",
+      "password": "password3",
+      "news_preferences": ["entertainment", "science"]
+    }
+  ]
