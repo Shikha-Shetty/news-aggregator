@@ -1,5 +1,14 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+const ENUM_CATEGORIES = [
+    "business",
+    "entertainment",
+    "general",
+    "health",
+    "science",
+    "sports",
+    "technology",
+  ];
 
 var userSchema = new Schema({
     fullName: {
@@ -28,6 +37,13 @@ var userSchema = new Schema({
         type: String, 
         required: [true, "Password not provided"],
     },  
+    preferences: {
+        type: [{
+            type: String,
+            enum: ENUM_CATEGORIES
+          }],
+        required: [true, "Preference not provided123"]
+    },
     created: {
         type: Date,
         default: Date.now

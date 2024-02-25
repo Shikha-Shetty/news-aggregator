@@ -7,7 +7,8 @@ var signup = (req, res) => {
         fullName: req.body.fullName,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 8),
-        role: req.body.role
+        role: req.body.role,
+        preferences: req.body.preferences
     });
     user.save().then((data) => {
         return res.status(200).json({user:data, message: "User created successfully"});
